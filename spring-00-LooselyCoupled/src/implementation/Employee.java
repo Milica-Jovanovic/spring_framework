@@ -1,2 +1,6 @@
-package implementation;public interface Employee {
+package implementation;
+
+public interface Employee {
+
+    void createAccount();
 }
