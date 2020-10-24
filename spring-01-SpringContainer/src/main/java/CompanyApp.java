@@ -18,7 +18,7 @@ public class CompanyApp {
 
         ApplicationContext container2 = new ClassPathXmlApplicationContext("config.xml");
 
-        Employee employee2 = container2.getBean("partTimeEmployee",Employee.class);
+        Employee employee2 = (Employee) container1.getBean("fullTimeEmployee");
 
         employee2.createAccount();
 
