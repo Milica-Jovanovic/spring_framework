@@ -8,8 +8,8 @@ import lombok.Data;
 public class FullTime implements Hours {
 
 
-
-    private OverTime overTime;
+    private ExtraHours extraHours;
+    //private OverTime overTime;
 
 // command + N and choose getter and setter
 /*    public OverTime getOverTime() {
@@ -21,7 +21,7 @@ public class FullTime implements Hours {
     }
 */
     public void getHours() {
-        System.out.println("Weekly Teaching Hours : " + (20 + overTime.getExtraHours()));
+        System.out.println("Weekly Teaching Hours : " + (20 + extraHours.getExtraHours()));
     }
 
 }
