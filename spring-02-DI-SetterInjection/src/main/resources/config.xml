@@ -5,7 +5,7 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="fullTime" class="com.company.services.FullTime">
-        <constructor-arg ref="overTime"/>
+        <property name="overTime" ref="overTime"/>
     </bean>
     <bean id="partTime" class="com.company.services.PartTime"></bean>
 
