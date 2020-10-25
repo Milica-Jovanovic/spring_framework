@@ -10,9 +10,16 @@ public class CompanyApp {
 
         ApplicationContext container = new ClassPathXmlApplicationContext("config.xml");
 
-        Hours hours = container.getBean("fullTime", Hours.class);
+        Hours hours1 = container.getBean("fullTime", Hours.class);
 
-        hours.getHours();
+        Hours hours2 = container.getBean("fullTime", Hours.class);
+
+        System.out.println("Pointing to the same object: "+ (hours1 == hours2));
+
+        System.out.println("Memory Location for the hours1: " + hours1);
+
+        System.out.println("Memory Location for the hours2: " + hours2);
+
 
     }
 }
