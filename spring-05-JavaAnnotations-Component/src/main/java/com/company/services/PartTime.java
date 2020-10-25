@@ -6,7 +6,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class PartTime implements Hours {
 
+    @Override
     public void getHours() {
-        System.out.println("Weekly hours 22");
+        System.out.println("Weekly hours : 23");
     }
 }

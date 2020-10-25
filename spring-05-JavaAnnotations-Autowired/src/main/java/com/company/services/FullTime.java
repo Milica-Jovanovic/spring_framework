@@ -33,7 +33,7 @@ public class FullTime implements Hours {
 
     @Override
     public void getHours() {
-        System.out.println("Weekly teaching hours :" + (30 + overTime.getExtraHours()));
+        System.out.println("Weekly hours :" + (30 + overTime.getExtraHours()));
     }
 }
 
