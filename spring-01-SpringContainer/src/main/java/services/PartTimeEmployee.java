@@ -8,7 +8,7 @@ public class PartTimeEmployee implements Employee {
     public void createAccount() {
 
         System.out.println("Part Time Mentor account is created");
-        
+
     }
 
 }

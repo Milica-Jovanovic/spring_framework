@@ -11,9 +11,12 @@ public class FullTime implements Hours {
         this.extraHours = extraHours;
     }
 
+    
     @Override
     public void getHours() {
+
         System.out.println("Weekly Teaching Hours : " + (20 + extraHours.getExtraHours()));
+
     }
 
 }
