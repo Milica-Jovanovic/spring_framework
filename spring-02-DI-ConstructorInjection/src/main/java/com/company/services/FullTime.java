@@ -11,7 +11,7 @@ public class FullTime implements Hours {
         this.extraHours = extraHours;
     }
 
-    
+
     @Override
     public void getHours() {
 

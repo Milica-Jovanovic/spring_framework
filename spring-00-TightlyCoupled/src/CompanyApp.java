@@ -8,6 +8,6 @@ public class CompanyApp {
         Employee employee = new Employee(fullTime,partTime); //MI
         employee.manageAccount();
 
-        //MI
+        //Runner
     }
 }
