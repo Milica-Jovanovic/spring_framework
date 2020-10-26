@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 public class FullTime implements Hours {
 
 
+    // Field injection
     @Autowired
     private OverTime overTime;
 /*
