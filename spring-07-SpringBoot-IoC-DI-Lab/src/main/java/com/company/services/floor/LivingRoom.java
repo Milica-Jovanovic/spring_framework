@@ -17,6 +17,7 @@ public class LivingRoom implements Floor {
 
     @Override
     public BigDecimal getArea() {
+
         return width.multiply(length);
     }
 }
