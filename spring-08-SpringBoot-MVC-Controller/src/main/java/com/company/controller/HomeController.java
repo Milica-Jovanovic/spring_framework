@@ -1,46 +1,64 @@
 package com.company.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.stream.Stream;
-
+@Controller
 public class HomeController {
 
     @RequestMapping("/")
-    public String getRequestMapping() {
-
+    public String getRequestMapping(){
         return "home";
     }
 
-    @RequestMapping("/Milica")
-    public String getRequestMapping2() {
-
+    @RequestMapping(method = RequestMethod.GET,value = "/milica")
+    public String getRequestMapping2(){
         return "home";
     }
 
-    @RequestMapping(method= RequestMethod.GET, value="/Milica")
-    public String getRequestMapping3() {
-
+    @RequestMapping(method = RequestMethod.POST,value = "/milica")
+    public String getRequestMapping3(){
         return "home";
     }
 
-    @GetMapping ("/spring")
-    public String getMappingExample() {
+//    @GetMapping("/spring")
+//    public String getMappingEx(){
+//        return "home";
+//    }
 
+    @PostMapping("/spring")
+    public String getMappingEx2(){
         return "home";
     }
 
-    @PostMapping ("/spring")
-    public String postMappingExample() {
-
+    @GetMapping("/home/{name}")
+    public String pathVariableEx(@PathVariable("name") String name){
+        System.out.println("name is: " + name);
         return "home";
     }
 
-    @GetMapping ("/spring/{name}")
-    public String pathVariableExample(@PathVariable("name")String name) {
-
+    @GetMapping("/home/{name}/{email}")
+    public String pathVariableEx2(@PathVariable("name") String name,@PathVariable("email") String email){
+        System.out.println("name is: " + name);
+        System.out.println("email is: " + email);
         return "home";
     }
+
+    @GetMapping("home/course")
+    public String requestParamEx(@RequestParam("course") String course){
+        System.out.println("name is :" + course);
+        return "home";
+    }
+
+    @GetMapping("home/course2")
+    public String requestParam2(@RequestParam(value = "course2",required = false,defaultValue = "Cybertek") String name){
+        System.out.println("name is: " + name);
+        return "home";
+    }
+
+
+
+
 
 
 }
