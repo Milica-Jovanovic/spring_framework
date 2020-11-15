@@ -1,6 +1,7 @@
 package com.company.controller;
 
 
+import com.company.model.Employee;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -42,6 +43,9 @@ public class EmployeeController {
         //print birthday
         LocalDate birthday = LocalDate.now().minusYears(30).minusMonths(4).minusDays(11);
         model.addAttribute("birthday", birthday);
+
+        Employee employee = new Employee(1, "Milica", "Jovanovic" );
+        model.addAttribute("employee", employee);
 
         return "employee/welcome";
     }
