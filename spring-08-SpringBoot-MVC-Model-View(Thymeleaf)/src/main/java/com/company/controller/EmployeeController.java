@@ -6,6 +6,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 @Controller
 @RequestMapping("/employee")
 public class EmployeeController {
@@ -21,6 +25,17 @@ public class EmployeeController {
 
         String subject = "Collections";
         model.addAttribute("subject", subject);
+
+        // Creating some random employeeID (0 - 1000) and showing it in our UI
+        int employeeID = new Random().nextInt(1000);
+        model.addAttribute("id", employeeID);
+
+
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(4);
+        numbers.add(7);
+        numbers.add(90);
+        model.addAttribute("numbers", numbers);
 
 
         return "employee/welcome";
