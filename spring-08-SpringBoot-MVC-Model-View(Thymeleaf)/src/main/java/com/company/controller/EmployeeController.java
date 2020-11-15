@@ -17,7 +17,7 @@ import java.util.Random;
 public class EmployeeController {
 
     @GetMapping("/welcome")
-    public String homepage(Model model) {
+    public String homePage(Model model) {
 
 
         // String name = "Milica";
@@ -49,5 +49,15 @@ public class EmployeeController {
 
         return "employee/welcome";
     }
+
+
+
+
+    @GetMapping("/register")
+    public String homePage2(Model model) {
+
+        return "employee/register";
+    }
+
 
 }
