@@ -38,8 +38,12 @@
 <!--Iteration-->
 <ul>
     <li th:each="number : ${numbers}" th:text="${number}"></li>
-
 </ul>
+
+
+<!--Iteration-->
+<div th:replace="fragments/footer :: company"></div>
+
 
 
 </body>
