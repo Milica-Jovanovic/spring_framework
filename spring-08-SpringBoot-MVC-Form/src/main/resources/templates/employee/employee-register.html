@@ -9,7 +9,7 @@
 
 <div align="center">
 
-    <form th:object="${employee}">
+    <form action="employee/confirm" method="post" th:object="${employee}">
 
         <label>First Name:</label>
         <input type="text" id="firstName" th:field="*{firstName}"><br>
