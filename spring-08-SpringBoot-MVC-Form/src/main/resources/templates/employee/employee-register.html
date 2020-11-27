@@ -1,10 +1,45 @@
 <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-    EMPLOYEE REGISTRATION!!!
+
+<div align="center">
+
+    <form th:object="${employee}">
+
+        <label>First Name:</label>
+        <input type="text" id="firstName" th:field="*{firstName}"><br>
+
+        <label>Last Name:</label>
+        <input type="text" id="lastName" th:field="*{lastName}"><br>
+
+        <label>Email:</label>
+        <input type="email" id="email" th:field="*{email}"><br>
+
+        <label>High Education:</label>
+        <input type="checkbox" th:field="*{highEducation}"><br>
+
+        <label>Gender:</label>
+        <input type="radio" value="Male" th:field="*{gender}">Male
+        <input type="radio" value="Female" th:field="*{gender}">Female<br>
+
+        <label>Title:</label>
+        <select th:field="*{title}">
+            <option th:each="theTitle : ${titleList}" th:value="${theTitle}" th:text="${theTitle}" ></option>
+        </select><br>
+
+        <label>Department:</label>
+        <textarea th:field="*{department}"></textarea><br>
+
+        <button type="submit">Register</button>
+
+    </form>
+</div>
+
+
 </body>
 </html>
