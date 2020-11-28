@@ -5,6 +5,8 @@ import com.company.model.Employee;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.Arrays;
@@ -25,4 +27,12 @@ public class EmployeeController {
 
         return "employee/employee-register";
     }
+
+    @PostMapping("/confirm")
+    public String submitForm(@ModelAttribute("employee") Employee employee) {
+        System.out.println(employee.toString());
+        return "employee/employee-confirmation";
+    }
+
+
 }
